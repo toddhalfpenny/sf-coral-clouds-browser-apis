@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "47f8d6f2-fa79-43e1-a247-e875108b7b33",
+  "appPageId" : "3fd94595-dce8-4901-aab5-45a5da4ee529",
+  "configurationTags" : [ ],
+  "devName" : "Experience__c",
+  "id" : "fa3f45ce-a235-4288-8d26-a9ebe4deabd0",
+  "label" : "Experience",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-experience",
+  "type" : "route",
+  "urlPrefix" : "experience"
+}

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "db4dc285-0145-49d7-bca8-ee942176177d",
+  "appPageId" : "3fd94595-dce8-4901-aab5-45a5da4ee529",
+  "configurationTags" : [ ],
+  "devName" : "Experience_Related_List__c",
+  "id" : "68b0188b-710b-45d2-bddd-193519dd0c67",
+  "label" : "Experience Related List",
+  "objectApiName" : "Experience__c",
+  "routeType" : "relatedlist-a02",
+  "type" : "route",
+  "urlPrefix" : "experience"
+}

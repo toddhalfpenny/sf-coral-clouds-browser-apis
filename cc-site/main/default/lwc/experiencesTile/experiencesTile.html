@@ -1,11 +1,14 @@
 <template>
-    <button onclick={handleClick} title={experience.Name} class={tileClasses}>
-        <img
-            src={experience.Picture_URL__c}
-            class="experience-picture"
-            alt="Experience picture"
-        />
-        <p class="title slds-m-vertical_xx-small">{experience.Name}</p>
-        <p class="description">{experience.Description__c}</p>
-    </button>
+    <div>
+        <button onclick={handleClick} title={experience.Name} class={tileClasses}>
+            <img
+                src={experience.Picture_URL__c}
+                class="experience-picture"
+                alt="Experience picture"
+            />
+            <p class="title slds-m-vertical_xx-small">{experience.Name}</p>
+            <p class="description">{experience.Description__c}</p>
+        </button>
+        <a class="view-more" href={expUrl}>View more</a>
+    </div>
 </template>

@@ -7,6 +7,11 @@ import { LightningElement, api } from 'lwc';
 export default class ExperiencesTile extends LightningElement {
     /** Experience__c to display. */
     @api experience;
+    expUrl;
+
+    connectedCallback() {
+        this.expUrl = './experience/' + this.experience.Id;
+    }
 
     handleClick() {
         const selectedEvent = new CustomEvent('selected', {

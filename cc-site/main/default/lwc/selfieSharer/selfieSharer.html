@@ -1,0 +1,19 @@
+<template>
+  <div class="camera">
+    <lightning-card title="" icon-name="standard:system_and_global_variable">
+      <div slot="actions">
+        <lightning-button label="Take Photo" class="slds-m-left_xx-small" onclick={captureImage}></lightning-button>
+			  <lightning-button label="Share Photo" class="slds-m-left_xx-small" onclick={shareImage}></lightning-button>
+      </div>
+
+		  <div class="slds-grid slds-gutters">
+        <video lwc:ref="video">Video stream not available.</video>
+        <canvas lwc:ref="canvas" class="slds-hide"> </canvas>
+        <div class="output">
+          <img lwc:ref="photo" alt="The screen capture will appear in this box." src="" />
+        </div>
+      </div>
+    </lightning-card>
+  </div>
+
+</template>

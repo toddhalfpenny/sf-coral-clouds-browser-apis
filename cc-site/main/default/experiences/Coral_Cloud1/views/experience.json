@@ -25,14 +25,6 @@
       "componentName" : "forceCommunity:section",
       "id" : "861dbde9-6d6a-46d2-8704-b18c7d362122",
       "regions" : [ {
-        "components" : [ {
-          "componentAttributes" : { },
-          "componentName" : "c:siteHeader",
-          "id" : "5fe60304-f3f2-40aa-b69e-fcd76b197cbc",
-          "renderPriority" : "NEUTRAL",
-          "renditionMap" : { },
-          "type" : "component"
-        } ],
         "id" : "c3fd44fb-5d5c-437b-b01b-c78b5098f8cd",
         "regionLabel" : "Column 1",
         "regionName" : "1",
@@ -62,14 +54,6 @@
       "componentName" : "forceCommunity:section",
       "id" : "62612acd-afea-462d-a132-d888a9f6e751",
       "regions" : [ {
-        "components" : [ {
-          "componentAttributes" : { },
-          "componentName" : "c:siteFooter",
-          "id" : "01aea0a3-1f94-4a00-9670-ef466cf42ec5",
-          "renderPriority" : "NEUTRAL",
-          "renditionMap" : { },
-          "type" : "component"
-        } ],
         "id" : "bd15d63e-0040-426f-b0f9-04e8f932d890",
         "regionLabel" : "Column 1",
         "regionName" : "1",

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>63.0</apiVersion>
-    <description
-    >Create a case and route it to a queue so that it can be picked up by an Agent.</description>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Create a case and route it to a queue so that it can be picked up by an Agent.</description>
     <environments>Default</environments>
     <interviewLabel>Route to Queue {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Route to Queue</label>
@@ -58,14 +58,12 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
-        <description
-        >The a default contact to assign to a new case and messaging session.</description>
+        <description>The a default contact to assign to a new case and messaging session.</description>
         <name>Get_Contact</name>
         <label>Get Contact</label>
         <locationX>176</locationX>
         <locationY>134</locationY>
-        <assignNullValuesIfNoRecordsFound
-        >false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Create_Case</targetReference>
         </connector>
@@ -90,8 +88,7 @@
     </start>
     <status>Active</status>
     <variables>
-        <description
-        >The Id of the messaging session that triggers the flow.</description>
+        <description>The Id of the messaging session that triggers the flow.</description>
         <name>recordId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>

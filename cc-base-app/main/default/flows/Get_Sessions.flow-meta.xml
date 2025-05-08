@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>63.0</apiVersion>
-    <description
-    >Get the Sessions__c based on the provided specific Date and the Id of the
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Get the Sessions__c based on the provided specific Date and the Id of the
         Experience__c</description>
     <environments>Default</environments>
     <interviewLabel>Get Sessions {!$Flow.CurrentDateTime}</interviewLabel>
@@ -27,14 +27,12 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <description
-        >Get Experience Session records based on the Experience Id and the Date.</description>
+        <description>Get Experience Session records based on the Experience Id and the Date.</description>
         <name>Get_Sessions_by_Date</name>
         <label>Get Sessions by Date</label>
         <locationX>176</locationX>
         <locationY>134</locationY>
-        <assignNullValuesIfNoRecordsFound
-        >false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Date__c</field>
@@ -74,8 +72,7 @@
     </start>
     <status>Active</status>
     <variables>
-        <description
-        >The Id of the Experience__c that you would like to check for.</description>
+        <description>The Id of the Experience__c that you would like to check for.</description>
         <name>experienceId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -83,8 +80,7 @@
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <description
-        >The available Session__c records for the Experience__c</description>
+        <description>The available Session__c records for the Experience__c</description>
         <name>sessions</name>
         <dataType>SObject</dataType>
         <isCollection>true</isCollection>
@@ -93,8 +89,7 @@
         <objectType>Session__c</objectType>
     </variables>
     <variables>
-        <description
-        >The date that the user would like to view the Session__c for.</description>
+        <description>The date that the user would like to view the Session__c for.</description>
         <name>startDate</name>
         <dataType>Date</dataType>
         <isCollection>false</isCollection>

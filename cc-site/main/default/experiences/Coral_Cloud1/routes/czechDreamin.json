@@ -4,9 +4,9 @@
   "configurationTags" : [ ],
   "devName" : "Experience__c",
   "id" : "fa3f45ce-a235-4288-8d26-a9ebe4deabd0",
-  "label" : "Experience",
+  "label" : "CzechDreamin",
   "pageAccess" : "UseParent",
   "routeType" : "custom-experience",
   "type" : "route",
-  "urlPrefix" : "experience"
+  "urlPrefix" : "czechdreamin"
 }

@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Reviews_Summary__c</fullName>
-    <description
-    >A summary of all of the guest reviews for the Experience.</description>
+    <description>A summary of all of the guest reviews for the Experience.</description>
     <label>Reviews Summary</label>
     <length>32768</length>
     <trackTrending>false</trackTrending>

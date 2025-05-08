@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Assign_Created_Booking</name>
         <label>Assign Created Booking</label>
@@ -15,8 +16,7 @@
         </assignmentItems>
     </assignments>
     <assignments>
-        <description
-        >Assign the error message to the error variable if the booking fails.</description>
+        <description>Assign the error message to the error variable if the booking fails.</description>
         <name>Assign_Error_Message</name>
         <label>Assign Error Message</label>
         <locationX>440</locationX>
@@ -29,8 +29,7 @@
             </value>
         </assignmentItems>
     </assignments>
-    <description
-    >Create a Booking__c record when provided the numberOfGuests, ID of the contact and
+    <description>Create a Booking__c record when provided the numberOfGuests, ID of the contact and
         ID of the Session__c</description>
     <environments>Default</environments>
     <interviewLabel>Create Booking {!$Flow.CurrentDateTime}</interviewLabel>
@@ -55,8 +54,7 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
-        <description
-        >Create a booking record for the related contact and experience session.</description>
+        <description>Create a booking record for the related contact and experience session.</description>
         <name>Create_Booking_Record</name>
         <label>Create Booking Record</label>
         <locationX>176</locationX>
@@ -93,8 +91,7 @@
         <label>Get Booking Record</label>
         <locationX>176</locationX>
         <locationY>242</locationY>
-        <assignNullValuesIfNoRecordsFound
-        >false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Assign_Created_Booking</targetReference>
         </connector>
@@ -123,8 +120,7 @@
     </start>
     <status>Active</status>
     <variables>
-        <description
-        >The Id of the contact that will be used to create the related booking.</description>
+        <description>The Id of the contact that will be used to create the related booking.</description>
         <name>contactId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -141,8 +137,7 @@
         <objectType>Booking__c</objectType>
     </variables>
     <variables>
-        <description
-        >The error message included if there is an error with the booking.</description>
+        <description>The error message included if there is an error with the booking.</description>
         <name>errorMessage</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -150,8 +145,7 @@
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <description
-        >The number of guests that will be included in the booking.</description>
+        <description>The number of guests that will be included in the booking.</description>
         <name>numberOfGuests</name>
         <dataType>Number</dataType>
         <isCollection>false</isCollection>
@@ -160,8 +154,7 @@
         <scale>0</scale>
     </variables>
     <variables>
-        <description
-        >The Id of the session that the contact will be booked for.</description>
+        <description>The Id of the session that the contact will be booked for.</description>
         <name>sessionId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>

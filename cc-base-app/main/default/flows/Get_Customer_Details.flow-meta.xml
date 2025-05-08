@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>63.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
@@ -11,16 +11,14 @@
             <assignToReference>contactDetails</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference
-                >Get_Contact_by_Email_and_Member_Number</elementReference>
+                <elementReference>Get_Contact_by_Email_and_Member_Number</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>VerifiedCustomerId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference
-                >Get_Contact_by_Email_and_Member_Number.Id</elementReference>
+                <elementReference>Get_Contact_by_Email_and_Member_Number.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -44,8 +42,7 @@
             <name>No</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference
-                >Get_Contact_by_Email_and_Member_Number.Id</leftValueReference>
+                <leftValueReference>Get_Contact_by_Email_and_Member_Number.Id</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -54,11 +51,9 @@
             <label>No</label>
         </rules>
     </decisions>
-    <description
-    >Validate and retrieve Customers details by passing their email and memberNumber to see if there is a related contact.</description>
+    <description>Validate and retrieve Customers details by passing their email and memberNumber to see if there is a related contact.</description>
     <environments>Default</environments>
-    <interviewLabel
-    >Get Customer Details {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel>Get Customer Details {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Get Customer Details</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -80,15 +75,13 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <description
-        >Search for a contact record and validate that they are who they say they are by
+        <description>Search for a contact record and validate that they are who they say they are by
             their email and member number.</description>
         <name>Get_Contact_by_Email_and_Member_Number</name>
         <label>Get Contact by Email and Member Number</label>
         <locationX>176</locationX>
         <locationY>134</locationY>
-        <assignNullValuesIfNoRecordsFound
-        >false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Does_Contact_exist</targetReference>
         </connector>
@@ -121,14 +114,12 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference
-            >Get_Contact_by_Email_and_Member_Number</targetReference>
+            <targetReference>Get_Contact_by_Email_and_Member_Number</targetReference>
         </connector>
     </start>
     <status>Active</status>
     <variables>
-        <description
-        >Record holding customer details such as ID and interests.</description>
+        <description>Record holding customer details such as ID and interests.</description>
         <name>contactDetails</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
@@ -137,8 +128,7 @@
         <objectType>Contact</objectType>
     </variables>
     <variables>
-        <description
-        >The Email Address of the customer that is validating their identity.</description>
+        <description>The Email Address of the customer that is validating their identity.</description>
         <name>email</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -146,8 +136,7 @@
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <description
-        >Indicates whether the customer is verified. It is set to true if the customer is verified.</description>
+        <description>Indicates whether the customer is verified. It is set to true if the customer is verified.</description>
         <name>IsCustomerVerified</name>
         <dataType>Boolean</dataType>
         <isCollection>false</isCollection>
@@ -158,8 +147,7 @@
         </value>
     </variables>
     <variables>
-        <description
-        >The Member Number of the customer that is validating their identity.</description>
+        <description>The Member Number of the customer that is validating their identity.</description>
         <name>memberNumber</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>

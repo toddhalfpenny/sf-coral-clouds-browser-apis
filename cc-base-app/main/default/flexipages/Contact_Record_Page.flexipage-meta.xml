@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
         <name>header</name>
@@ -258,8 +258,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Lifetime_Experience_Bookings__c</fieldItem>
-                <identifier
-                >RecordLifetime_Experience_Bookings_cField</identifier>
+                <identifier>RecordLifetime_Experience_Bookings_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-aa122401-5069-4151-82bf-ff573ac142af</name>
@@ -502,10 +501,8 @@
                     <name>displayOption</name>
                     <value>BOTH</value>
                 </componentInstanceProperties>
-                <componentName
-                >runtime_sales_merge:mergeCandidatesPreviewCard</componentName>
-                <identifier
-                >runtime_sales_merge_mergeCandidatesPreviewCard</identifier>
+                <componentName>runtime_sales_merge:mergeCandidatesPreviewCard</componentName>
+                <identifier>runtime_sales_merge_mergeCandidatesPreviewCard</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -546,8 +543,7 @@
                     <name>showLegacyActivityComposer</name>
                     <value>false</value>
                 </componentInstanceProperties>
-                <componentName
-                >runtime_sales_activities:activityPanel</componentName>
+                <componentName>runtime_sales_activities:activityPanel</componentName>
                 <identifier>runtime_sales_activities_activityPanel</identifier>
             </componentInstance>
         </itemInstances>

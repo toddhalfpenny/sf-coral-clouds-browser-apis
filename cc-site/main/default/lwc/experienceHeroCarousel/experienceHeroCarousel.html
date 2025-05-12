@@ -1,29 +1,43 @@
 <template>
-  <div class="slds-size_4-of-4">
+  <div class="carousel">
       <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
-          <c-enhanced-carousel>
-              <lightning-carousel-image
-                  src = "https://www.lightningdesignsystem.com/assets/images/carousel/carousel-01.jpg"
-                  header = "First Card"
-                  description = "First card description."
-                  alternative-text = "First card accessible description."
-                  href = "javascript:void(0);">
-              </lightning-carousel-image>
-              <lightning-carousel-image
-                  src = "https://www.lightningdesignsystem.com/assets/images/carousel/carousel-02.jpg"
-                  header = "Second Card"
-                  description = "Second card description."
-                  alternative-text = "Second card accessible description."
-                  href = "javascript:void(0);">
-              </lightning-carousel-image>
-              <lightning-carousel-image
-                  src = "https://www.lightningdesignsystem.com/assets/images/carousel/carousel-03.jpg"
-                  header = "Third Card"
-                  description = "Third card description."
-                  alternative-text = "Third card accessible description."
-                  href = "javascript:void(0);">
-              </lightning-carousel-image>
-          </c-enhanced-carousel>
+        <div class="landscapePopover" popover>
+            <img class="desktop" 
+            src ={expImage01}>
+        </div>
+        <div class="portraitPopover" popover>
+            <img class="mobile" src={expImage02Rotated}>
+        </div>
+        <template lwc:if={isFullScreen}>
+        </template>
+        <template lwc:else>
+            <c-enhanced-carousel>
+                <lightning-carousel-image
+                    src ={expImage01}
+                    header = "First Card"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);"
+                    onclick={handleFullScreen}>
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={expImage02}
+                    header = "Second Card"
+                    description = "Second card description."
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);"
+                    onclick={handleFullScreen}>
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={expImage03}
+                    header = "Third Card"
+                    description = "Third card description."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);"
+                    onclick={handleFullScreen}>
+                </lightning-carousel-image>
+            </c-enhanced-carousel>
+        </template>
       </div>
   </div>
 </template>

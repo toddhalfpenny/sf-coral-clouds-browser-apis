@@ -1,0 +1,36 @@
+::backdrop {
+  backdrop-filter: blur(3px);
+}
+
+.mypopover {
+  max-width: 90%;
+  border: 1px solid blue
+}
+
+.mypopover img {
+  display: block;
+  max-width: 100%;
+  width: 2000px;
+}
+
+.mypopover img.mobile {
+  display: none;
+}
+
+.carousel {
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+@media screen and (max-width: 480px) {
+  /* .mypopover img {{
+    transform: rotate(90deg);
+  } */
+  .mypopover img.desktop {
+    display: none;
+  }
+  .mypopover img.mobile {
+    display: block;
+  }
+}

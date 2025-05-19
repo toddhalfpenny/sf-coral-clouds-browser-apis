@@ -62,6 +62,32 @@ public with sharing class ExperienceController {
         return result;
     }
 
+    /**
+     * Endpoint that retrieves the latest reviews for an experience
+     * @param experienceId Experience ID
+     * @return List of Guest_Review__c records
+     */
+    @AuraEnabled(cacheable=true scope='global')
+    public static List<Guest_Review__c> getExperienceReviews(
+        Id experienceId
+    ) {
+        System.debug('TODD'); 
+        System.debug(experienceId); 
+        List<Guest_Review__c> reviews = [
+            SELECT
+                Id,
+                Comments__c,
+                Rating__c,
+                Rating_Value__c
+            FROM Guest_Review__c
+            WHERE Experience__c = :experienceId
+            WITH USER_MODE
+            LIMIT 5
+        ];
+        System.debug(reviews); 
+        return reviews;
+    }
+
     public with sharing class PagedResult {
         @AuraEnabled
         public Integer pageSize { get; set; }

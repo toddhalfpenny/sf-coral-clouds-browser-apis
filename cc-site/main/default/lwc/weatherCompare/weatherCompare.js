@@ -1,10 +1,12 @@
 import { LightningElement } from 'lwc';
+import resources from '@salesforce/resourceUrl/coralcloudsite';
 
 const LOGTAG = "weatherCompare";
 const API_KEY = "27d417302bce45e19ea105504250805"
 const API_BASE = "https://api.weatherapi.com/v1/"
 export default class WeatherCompare extends LightningElement {
   tempDifference
+  shareIcon = resources + '/webshare.svg#icon';
 
   connectedCallback() {
     console.log(LOGTAG, "connectedCallback");
@@ -19,7 +21,7 @@ export default class WeatherCompare extends LightningElement {
               const currentTemperature = await this.getTemperature(s.coords.latitude, s.coords.longitude);
               console.log(LOGTAG, "currentTemperature", currentTemperature);
               if (currentTemperature){
-                this.tempDifference = 30.5 - currentTemperature;
+                this.tempDifference = Math.round(30.5 - currentTemperature);
               }
             } catch  (error) {
               console.error(LOGTAG, "getTemperature error", JSON.parse(JSON.stringify(error)));
@@ -48,6 +50,22 @@ export default class WeatherCompare extends LightningElement {
       return json?.current?.temp_c ?? null;
     } catch (error) {
       console.error(LOGTAG, error.message);
+    }
+  }
+
+  async share(){
+    console.log(LOGTAG, "share");
+
+    try {
+      const text = `We could be away with Coral Cloud Resorts... and be ${this.tempDifference ?? 'some'} degrees warmer`;
+      const shareData = {
+        title: "Coral Cloud Experience",
+        text: text,
+        url: "https://coralclouds.com",
+      };
+      await navigator.share(shareData);
+    } catch (err) {
+      console.log(`Error: ${err}`);
     }
   }
 }

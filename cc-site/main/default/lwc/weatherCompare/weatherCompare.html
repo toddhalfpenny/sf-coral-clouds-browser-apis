@@ -1,7 +1,8 @@
 <template>
-  <div class="slds-size_4-of-4">
-    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+  <div class="slds-m-top_small">
+    <div class="slds-box slds-box_x-small slds-text-align_center">
       <p lwc:if={tempDifference}><em>Brrrrr...</em> it's currently {tempDifference}&deg; colder where you are.</p>
+      <lightning-button-icon icon-name="action:share" class="slds-m-left_small" onclick={share}></lightning-button-icon>
     </div>
   </div>
 </template>

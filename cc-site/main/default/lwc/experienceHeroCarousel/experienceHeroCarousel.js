@@ -7,8 +7,8 @@ export default class ExperienceHeroCarousel extends LightningElement {
   landscapePopover;
   portraitPopover;
   expImage01 = expImages + '/exp-carousel-01.jpg';
-  expImage02 = expImages + '/exp-carousel-03.jpg';
-  expImage03 = expImages + '/exp-carousel-04.jpg';
+  expImage02 = expImages + '/exp-carousel-02.jpg';
+  expImage03 = expImages + '/exp-carousel-03.jpg';
   expImage02Rotated = expImages + '/exp-carousel-02-rotated.jpg';
 
   renderedCallback() {
@@ -25,6 +25,7 @@ export default class ExperienceHeroCarousel extends LightningElement {
     //     console.log("landscape");
     //     }
     // });
+    // window.addEventListener("deviceorientation", this.handleOrientation, 1000);
   }
 
   handleFullScreen() {

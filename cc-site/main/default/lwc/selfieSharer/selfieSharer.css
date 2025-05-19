@@ -1,0 +1,7 @@
+.videoElement {
+  max-width: 100%;
+}
+
+.output, .output img {
+  max-width: 100%;
+}

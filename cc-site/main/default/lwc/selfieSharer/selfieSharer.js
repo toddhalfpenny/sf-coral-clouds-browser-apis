@@ -15,7 +15,12 @@ export default class SelfieSharer extends LightningElement {
     this.video = this.refs.video;
     this.canvas = this.refs.canvas;
     this.photo = this.refs.photo;
+  }
 
+  startCamera() {
+
+    this.clearPhoto()
+    this.video.classList.remove('slds-hide');
     navigator.mediaDevices
     .getUserMedia({ video: true, audio: false })
     .then((stream) => {
@@ -28,6 +33,12 @@ export default class SelfieSharer extends LightningElement {
     });
   }
 
+  stopCamera() {
+    this.video.srcObject.getTracks().forEach((track) => track.stop());
+    this.video.srcObject = null;
+    this.video.classList.add('slds-hide');
+  }
+
   captureImage() {
     console.log("handleClick");
     const context = this.canvas.getContext("2d");
@@ -36,9 +47,13 @@ export default class SelfieSharer extends LightningElement {
       this.canvas.width = this.video.videoWidth;
       this.canvas.height = this.video.videoHeight;
       context.drawImage(this.video, 0, 0, this.canvas.width, this.canvas.height);
-  
+      
+      this.stopCamera();
+      
       const data = this.canvas.toDataURL("image/png");
       this.photo.setAttribute("src", data);
+
+      this.photo.classList.remove('slds-hide');
       console.log("data", data);
     } else {
       console.log("handleClick 2");
@@ -53,6 +68,7 @@ export default class SelfieSharer extends LightningElement {
     context.fillRect(0, 0, this.canvas.width, this.canvas.height);
   
     const data = this.canvas.toDataURL("image/png");
+    this.photo.classList.add('slds-hide');
     this.photo.setAttribute("src", data);
   }
 

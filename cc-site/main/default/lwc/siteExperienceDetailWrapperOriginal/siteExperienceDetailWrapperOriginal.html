@@ -1,0 +1,24 @@
+<template>
+  <div class="slds-m-around_small">
+    <lightning-card>
+      <h3 slot="title" lwc:if={experience}>Name: {experience.fields.Name.value}</h3>
+      <div slot="footer">
+              <lightning-badge label="Extreme"></lightning-badge>
+              <lightning-badge label="Warm"></lightning-badge>
+              <lightning-badge label="Active"></lightning-badge>
+      </div>
+    </lightning-card>
+    <c-experience-hero-carousel-orig></c-experience-hero-carousel-orig>
+    <div lwc:ref="description">
+      <p lwc:if={experience}  class="slds-p-horizontal_small">{experience.fields.Description__c.value}</p>
+    </div>
+    <div class="slds-m-top_small">
+      <lightning-card class="reviews">
+        <h3 slot="title" lwc:if={reviews}>Reviews</h3>
+          <template for:each={reviews} for:item="review">
+            <p class="slds-p-horizontal_small" key={review.Id}>{review.Comments__c}</p>
+          </template>
+      </lightning-card>
+    </div>
+  </div>
+</template>

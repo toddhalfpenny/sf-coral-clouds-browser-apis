@@ -25,6 +25,14 @@
       "componentName" : "forceCommunity:section",
       "id" : "861dbde9-6d6a-46d2-8704-b18c7d362122",
       "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:selfieSharer",
+          "id" : "638e2cc2-9b54-467e-810d-1ad705429c55",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
         "id" : "c3fd44fb-5d5c-437b-b01b-c78b5098f8cd",
         "regionLabel" : "Column 1",
         "regionName" : "1",

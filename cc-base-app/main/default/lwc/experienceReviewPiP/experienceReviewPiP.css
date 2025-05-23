@@ -1,0 +1,8 @@
+:picture-in-picture {
+  color: blue;
+}
+
+:picture-in-picture .rating {
+  display : inline-block;
+  width: 2em;
+}

@@ -1,0 +1,8 @@
+<template>
+  <lightning-card title="Speech Control " icon-name="custom:custom112">
+    <div slot="actions">
+      <lightning-spinner lwc:if={inProgress} alternative-text="Loading" size="small"></lightning-spinner>
+      <lightning-button label="Talk to me" class="slds-m-left_xx-small" onclick={startT2S}></lightning-button>
+    </div>
+  </lightning-card>
+</template>

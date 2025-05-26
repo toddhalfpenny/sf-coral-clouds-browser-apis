@@ -76,9 +76,9 @@ export default class T2sCaseControl extends LightningElement {
 
 
   async updateStatus(command) {
-    console.log("updateStatus");
+    // console.log("updateStatus");
     try {
-      console.log("updateStatus", command)
+      // console.log("updateStatus", command)
       let status;
       switch (command) {
         case 'close':
@@ -88,16 +88,21 @@ export default class T2sCaseControl extends LightningElement {
           status = 'Open';
           break;
       }
+      if (!status) {
+        console.warn("Sorry, I don't know that command:", command);
+        console.warn("Computer says no.");
+        return;
+      }
 
       const fields = {};
       fields[ID_FIELD.fieldApiName] = this.recordId;
       fields[STATUS_FIELD.fieldApiName] = status;
       const recordInput = { fields };
-      console.log("updateStatus", recordInput);
+      // console.log("updateStatus", recordInput);
       this.inProgress = true;
       updateRecord(recordInput)
         .then(result => {
-        console.log('OK RESULT==>>> '+JSON.stringify(result));
+        // console.log('OK RESULT==>>> '+JSON.stringify(result));
         this.inProgress = false;
             this.cases = result;
             this.error = undefined;

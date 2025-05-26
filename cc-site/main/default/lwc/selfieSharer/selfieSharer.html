@@ -2,17 +2,17 @@
   <div class="camera">
     <lightning-card>
       <div slot="actions">
-        <lightning-button label="Start Camera" class="slds-m-left_xx-small" onclick={startCamera}></lightning-button>
-        <lightning-button label="Take Photo" class="slds-m-left_xx-small" onclick={captureImage}></lightning-button>
-			  <lightning-button label="Share Photo" class="slds-m-left_xx-small" onclick={shareImage}></lightning-button>
+        <lightning-button icon-name="utility:video" class="slds-m-left_xx-small" onclick={startCamera}></lightning-button>
+        <lightning-button icon-name="utility:photo" class="slds-m-left_xx-small" onclick={captureImage}></lightning-button>
+			  <lightning-button icon-name="action:share" class="slds-m-left_xx-small" onclick={shareImage}></lightning-button>
       </div>
 
-		  <div class="slds-grid slds-gutters">
+		  <div class="myWrapper">
         <video lwc:ref="video" class="videoElement" >Video stream not available.</video>
         <canvas lwc:ref="canvas" class="slds-hide"> </canvas>
-      </div>
-      <div class="output">
-        <img lwc:ref="photo" alt="The screen capture will appear in this box." src="" class="slds-hide" />
+        <div class="output">
+          <img lwc:ref="photo" alt="The screen capture will appear in this box." src="" class="slds-hide" />
+        </div>
       </div>
     </lightning-card>
   </div>

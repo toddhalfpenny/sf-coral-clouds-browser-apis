@@ -1,7 +1,16 @@
+.myWrapper {
+  /* display: flex; */
+}
+
+.actions {
+
+}
+
 .videoElement {
-  max-width: 100%;
+  max-width: 40%;
+  /* max-height: 80%; */
 }
 
 .output, .output img {
-  max-width: 100%;
+  max-width: 90%;
 }

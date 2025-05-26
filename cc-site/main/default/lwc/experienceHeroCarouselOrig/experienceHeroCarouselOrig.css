@@ -2,11 +2,9 @@
   backdrop-filter: blur(3px);
 }
 
-.landscapePopover {
-  overflow: hidden;
-  max-height: 80%;
-  max-width: 80%;
-  border: 1px solid #EFF0F2;
+.mypopover {
+  max-width: 90%;
+  border: 1px solid blue
 }
 
 .mypopover img {

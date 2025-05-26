@@ -6,7 +6,7 @@ import NAME_FIELD from '@salesforce/schema/Experience__c.Name';
 import DESC_FIELD from '@salesforce/schema/Experience__c.Description__c';
 import RATING_FIELD from '@salesforce/schema/Experience__c.Rating__c';
 
-const LOGTAG = "SiteExpWrapper";
+const LOGTAG = "SiteExpWrapperOrig";
 const FIELDS = [
     NAME_FIELD,
     DESC_FIELD,

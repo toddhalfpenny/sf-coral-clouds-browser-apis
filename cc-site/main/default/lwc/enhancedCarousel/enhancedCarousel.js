@@ -114,6 +114,7 @@ export default class EnhancedCarousel extends LightningElement {
                 this.setAutoScroll();
             }
             document.addEventListener("visibilitychange", () => {
+                console.log("Our tab's visibility has changed", document.hidden);
                 if (document.hidden) {
                     this.autoScrollOff();
                 } else {
